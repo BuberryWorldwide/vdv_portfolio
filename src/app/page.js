@@ -1,4 +1,5 @@
 'use client'
+import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { 
   Wrench,
@@ -105,12 +106,12 @@ export default function Home() {
 
             {/* CTA Button */}
             <div className="hidden md:block">
-              <button 
-                onClick={() => scrollToSection('contact')} 
+              <Link 
+                href="/consultation"
                 className="bg-slate-700 hover:bg-slate-800 text-white px-6 py-2 rounded-md font-medium transition-colors inline-flex items-center gap-2"
               >
-                Get Quote <ArrowRight className="w-4 h-4" />
-              </button>
+                Request Service <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}
@@ -135,19 +136,18 @@ export default function Home() {
                     {item}
                   </button>
                 ))}
-                <button 
-                  onClick={() => scrollToSection('contact')} 
-                  className="bg-slate-700 text-white px-4 py-2 rounded-md font-medium mt-2"
+                <Link 
+                  href="/consultation"
+                  className="bg-slate-700 text-white px-4 py-2 rounded-md font-medium mt-2 text-center block"
                 >
-                  Get Quote
-                </button>
+                  Request Service
+                </Link>
               </div>
             </div>
           )}
         </div>
       </header>
 
-      {/* Hero - Clean Business Layout */}
       {/* Hero - Clean Business Layout */}
       <section id="home" className="relative py-20 bg-slate-50">
         <div 
@@ -182,14 +182,14 @@ export default function Home() {
                   onClick={() => scrollToSection('services')} 
                   className="bg-slate-700 hover:bg-slate-800 text-white px-8 py-3 rounded-md font-semibold transition-colors inline-flex items-center justify-center gap-2"
                 >
-                  View Services <ArrowRight className="w-5 h-5" />
+                  Our Services <ArrowRight className="w-5 h-5" />
                 </button>
-                <button 
-                  onClick={() => scrollToSection('process')} 
-                  className="border-2 border-slate-300 hover:border-slate-600 hover:text-slate-800 text-slate-600 px-8 py-3 rounded-md font-semibold transition-colors"
+                <Link 
+                  href="/consultation"
+                  className="border-2 border-slate-300 hover:border-slate-600 hover:text-slate-800 text-slate-600 px-8 py-3 rounded-md font-semibold transition-colors text-center inline-flex items-center justify-center"
                 >
-                  Our Process
-                </button>
+                  Get Started
+                </Link>
               </div>
             </div>
 
@@ -449,7 +449,7 @@ export default function Home() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Start Your Project?</h2>
             <p className="text-xl text-slate-200 max-w-2xl mx-auto">
-              Get in touch to discuss your digital infrastructure needs
+              Contact us to discuss your technical infrastructure needs and service requirements
             </p>
           </div>
 
@@ -500,28 +500,39 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Contact Form Placeholder */}
+              {/* Service Request Form */}
               <div className="p-8">
-                <h3 className="text-xl font-bold text-slate-800 mb-6">Get Project Quote</h3>
+                <h3 className="text-xl font-bold text-slate-800 mb-6">Request Technical Services</h3>
                 <div className="space-y-4">
                   <p className="text-gray-600">
-                    For partnership opportunities, technical implementation projects, or business development inquiries, 
-                    please contact us through appropriate business channels.
+                    For digital infrastructure projects, technical implementation services, or partnership opportunities, 
+                    contact us to discuss your requirements and timeline.
                   </p>
                   
                   <div className="bg-slate-100 p-4 rounded-lg">
-                    <h4 className="font-semibold text-slate-800 mb-2">What We Provide</h4>
+                    <h4 className="font-semibold text-slate-800 mb-2">Our Service Process</h4>
                     <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Detailed project assessment</li>
-                      <li>• Technical implementation timeline</li>
-                      <li>• Transparent pricing structure</li>
-                      <li>• Ongoing support agreements</li>
+                      <li>• Initial project consultation</li>
+                      <li>• Technical requirements assessment</li>
+                      <li>• Service agreement development</li>
+                      <li>• Implementation & ongoing support</li>
                     </ul>
                   </div>
                   
-                  <button className="w-full bg-slate-700 hover:bg-slate-800 text-white py-3 px-6 rounded-md font-semibold transition-colors inline-flex items-center justify-center gap-2">
-                    Request Consultation <ExternalLink className="w-4 h-4" />
-                  </button>
+                  <Link 
+                    href="/consultation"
+                    className="w-full bg-slate-700 hover:bg-slate-800 text-white py-3 px-6 rounded-md font-semibold transition-colors inline-flex items-center justify-center gap-2"
+                  >
+                    Schedule Consultation <ExternalLink className="w-4 h-4" />
+                  </Link>
+                  
+                  {/* Simple contact info for now */}
+                  <div className="mt-6 pt-6 border-t border-slate-200">
+                    <p className="text-sm text-slate-500 text-center">
+                      Professional contractor services available nationwide.<br/>
+                      Licensed Tennessee LLC with comprehensive business insurance.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
