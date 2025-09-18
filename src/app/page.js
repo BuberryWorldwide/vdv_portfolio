@@ -1,6 +1,8 @@
 'use client'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
+
 import { 
   Wrench,
   Building2, 
@@ -62,10 +64,12 @@ export default function Home() {
             {/* Logo - Corporate Typography */}
             <div className="flex items-center space-x-3">
               <div className="h-12 w-12 flex items-center justify-center">
-                <img 
+                <Image 
                   src="/logo.png" 
                   alt="VDV Logo" 
-                  className="h-10 w-10 object-contain"
+                  width={40}
+                  height={40}
+                  className="object-contain"
                   onError={(e) => {
                     e.target.style.display = 'none';
                     e.target.nextSibling.style.display = 'block';
@@ -546,10 +550,12 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row justify-between items-center">
             <div className="flex items-center space-x-3 mb-4 lg:mb-0">
               <div className="h-10 w-10 flex items-center justify-center">
-                <img 
+                <Image 
                   src="/logo.png" 
                   alt="VDV Logo" 
-                  className="h-8 w-8 object-contain"
+                  width={32}
+                  height={32}
+                  className="object-contain"
                   onError={(e) => {
                     e.target.style.display = 'none';
                     e.target.nextSibling.style.display = 'block';

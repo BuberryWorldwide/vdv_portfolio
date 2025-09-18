@@ -67,7 +67,7 @@ export default function ConsultationPage() {
               <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
               <h1 className="text-2xl font-bold text-slate-800 mb-4">Consultation Request Sent</h1>
               <p className="text-slate-600 mb-6">
-                Thank you for your interest in VDV's technical services. We'll review your project requirements 
+                Thank you for your interest in VDV&apos;s technical services. We&apos;ll review your project requirements 
                 and contact you within 24 hours to schedule your consultation.
               </p>
               <div className="bg-slate-50 p-4 rounded-lg">
@@ -122,7 +122,7 @@ export default function ConsultationPage() {
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold text-slate-800 mb-4">Request Technical Consultation</h1>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Tell us about your project and we'll get back to you within 24 hours to discuss your requirements.
+              Tell us about your project and we&apos;ll get back to you within 24 hours to discuss your requirements.
             </p>
           </div>
 
