@@ -73,7 +73,7 @@ export default function Home() {
                 <Wrench className="h-6 w-6 text-slate-600" style={{display: 'none'}} />
               </div>
               <div className="hidden sm:block">
-                <div className="text-xl font-bold text-slate-800 tracking-tight">VDV</div>
+                <div className="text-xl font-bold text-slate-800 tracking-tight">Volunteer Digital Ventures</div>
                 <div className="text-xs text-slate-500 uppercase tracking-wider leading-tight">
                   Contractor Services
                 </div>
@@ -124,7 +124,7 @@ export default function Home() {
 
           {/* Mobile Menu */}
           {mobileMenuOpen && (
-            <div className="md:hidden py-4 border-t border-gray-200">
+            <div className="md:hidden py-4 border-t border-slate-200">
               <div className="flex flex-col space-y-2">
                 {['Home', 'Services', 'Process', 'About', 'Contact'].map((item) => (
                   <button 
@@ -148,7 +148,17 @@ export default function Home() {
       </header>
 
       {/* Hero - Clean Business Layout */}
-      <section id="home" className="bg-gradient-to-br from-slate-50 via-white to-blue-50 py-20">
+      {/* Hero - Clean Business Layout */}
+      <section id="home" className="relative py-20 bg-slate-50">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
+          style={{
+            backgroundImage: "url('/hero-bg.jpg')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
+        ></div>
+        <div className="relative z-10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Content */}
@@ -164,8 +174,7 @@ export default function Home() {
               </h1>
               
               <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-                Professional technical contractor specializing in digital commerce infrastructure. 
-                From site assessment to full deployment and ongoing support.
+                Professional technical contractor specializing in cryptocurrency mining infrastructure. From site assessment to full deployment and ongoing support.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
@@ -186,24 +195,25 @@ export default function Home() {
 
             {/* Stats/Info Cards */}
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-                <div className="text-3xl font-bold text-indigo-600 mb-2">24/7</div>
+              <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
+                <div className="text-3xl font-bold text-slate-600 mb-2">24/7</div>
                 <div className="text-gray-600 font-medium">Technical Support</div>
               </div>
-              <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-                <div className="text-3xl font-bold text-indigo-600 mb-2">TN</div>
+              <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
+                <div className="text-3xl font-bold text-slate-600 mb-2">TN</div>
                 <div className="text-gray-600 font-medium">Licensed LLC</div>
               </div>
-              <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-                <div className="text-3xl font-bold text-indigo-600 mb-2">100%</div>
+              <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
+                <div className="text-3xl font-bold text-slate-600 mb-2">100%</div>
                 <div className="text-gray-600 font-medium">Compliance Focus</div>
               </div>
-              <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-                <div className="text-3xl font-bold text-indigo-600 mb-2">∞</div>
+              <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
+                <div className="text-3xl font-bold text-slate-600 mb-2">∞</div>
                 <div className="text-gray-600 font-medium">Ongoing Support</div>
               </div>
             </div>
           </div>
+        </div>
         </div>
       </section>
 
@@ -303,7 +313,16 @@ export default function Home() {
       </section>
 
       {/* Process - Timeline Style */}
-      <section id="process" className="py-20 bg-slate-50">
+      <section id="process" className="relative py-20 bg-slate-50">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+          style={{
+            backgroundImage: "url('/process-bg.jpg')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
+        ></div>
+        <div className="relative z-10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-slate-800 mb-4">Our Implementation Process</h2>
@@ -348,12 +367,12 @@ export default function Home() {
                 }
               ].map((item, index) => (
                 <div key={index} className="relative flex items-start mb-12 last:mb-0">
-                  <div className="flex-shrink-0 w-16 h-16 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold z-10">
+                  <div className="flex-shrink-0 w-16 h-16 bg-slate-700 rounded-full flex items-center justify-center text-white font-bold z-10">
                     {item.step}
                   </div>
-                  <div className="ml-6 bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex-grow">
+                  <div className="ml-6 bg-white p-6 rounded-lg border border-slate-200 shadow-sm flex-grow">
                     <div className="flex items-center gap-3 mb-3">
-                      <item.icon className="w-5 h-5 text-indigo-600" />
+                      <item.icon className="w-5 h-5 text-slate-600" />
                       <h3 className="text-lg font-bold text-gray-900">{item.title}</h3>
                     </div>
                     <p className="text-slate-600 mb-6">{item.description}</p>
@@ -363,6 +382,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </div>
       </section>
 
       {/* About - Two Column */}
