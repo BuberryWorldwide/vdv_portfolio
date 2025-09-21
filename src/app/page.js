@@ -245,7 +245,7 @@ export default function Home() {
             </p>
             <p className="text-slate-500 text-sm">
               <a href="https://gambino.gold" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">
-                Learn more about Gambino Gold's cryptocurrency mining platform →
+                Learn more about Gambino Gold&apos;s cryptocurrency mining platform →
               </a>
             </p>
           </div>
