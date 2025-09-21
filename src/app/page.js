@@ -60,7 +60,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
-      {/* Header - Same as before */}
+      {/* Header */}
       <header className="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -150,82 +150,92 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Hero - Professional & Clean */}
-      <section id="home" className="relative py-20 bg-gradient-to-br from-slate-50 via-white to-slate-100">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm font-medium mb-6">
-                <Building2 className="w-4 h-4" />
-                Licensed Gambino Gold Implementation Partner
-                <a href="https://gambino.gold" target="_blank" rel="noopener noreferrer" className="ml-2 text-blue-600 hover:text-blue-800 underline text-xs">
-                  Learn More →
-                </a>
-              </div>
-              
-              <h1 className="text-4xl lg:text-5xl font-bold text-slate-800 mb-6 leading-tight">
-                Cryptocurrency Infrastructure
-                <span className="text-slate-600 block">for Business Venues</span>
-              </h1>
-              
-              <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-                VDV installs and manages Gambino Gold cryptocurrency mining systems for restaurants, bars, and entertainment venues. Professional deployment with full technical support.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <button 
-                  onClick={() => scrollToSection('services')} 
-                  className="bg-slate-700 hover:bg-slate-800 text-white px-8 py-3 rounded-md font-semibold transition-colors inline-flex items-center justify-center gap-2"
-                >
-                  Learn More <ArrowRight className="w-5 h-5" />
-                </button>
-                <Link 
-                  href="/consultation"
-                  className="border-2 border-slate-300 hover:border-slate-600 hover:text-slate-800 text-slate-600 px-8 py-3 rounded-md font-semibold transition-colors text-center inline-flex items-center justify-center"
-                >
-                  Schedule Assessment
-                </Link>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-green-500" />
-                  <span className="text-slate-600">Complete Installation</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-green-500" />
-                  <span className="text-slate-600">Staff Training</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-green-500" />
-                  <span className="text-slate-600">Ongoing Support</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative">
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-8 border border-blue-200">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Cpu className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-lg font-bold text-slate-800 mb-2">Gambino Gold Systems</h3>
-                  <p className="text-slate-600 text-sm mb-4">
-                    Professional cryptocurrency mining infrastructure designed for hospitality businesses
-                  </p>
-                  <div className="bg-white p-3 rounded-lg border border-blue-200 mb-3">
-                    <div className="text-xs text-slate-500 mb-1">Revenue Opportunity</div>
-                    <div className="text-lg font-bold text-slate-800">New Income Stream</div>
-                    <div className="text-xs text-slate-500">for your venue</div>
-                  </div>
-                  <a 
-                    href="https://gambino.gold" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:text-blue-800 text-sm underline"
-                  >
-                    Learn about Gambino Gold →
+      {/* Hero - With Background Image */}
+      <section id="home" className="relative py-20 bg-slate-50">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30 sm:opacity-40 md:opacity-50"
+          style={{
+            backgroundImage: "url('/hero-bg.jpg')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
+        ></div>
+        <div className="relative z-10">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm font-medium mb-6">
+                  <Building2 className="w-4 h-4" />
+                  Licensed Gambino Gold Implementation Partner
+                  <a href="https://gambino.gold" target="_blank" rel="noopener noreferrer" className="ml-2 text-blue-600 hover:text-blue-800 underline text-xs">
+                    Learn More →
                   </a>
+                </div>
+                
+                <h1 className="text-4xl lg:text-5xl font-bold text-slate-800 mb-6 leading-tight">
+                  Cryptocurrency Infrastructure
+                  <span className="text-slate-600 block">for Business Venues</span>
+                </h1>
+                
+                <p className="text-xl text-slate-600 mb-8 leading-relaxed">
+                  VDV installs and manages Gambino Gold cryptocurrency mining systems for restaurants, bars, and entertainment venues. Professional deployment with full technical support.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                  <button 
+                    onClick={() => scrollToSection('services')} 
+                    className="bg-slate-700 hover:bg-slate-800 text-white px-8 py-3 rounded-md font-semibold transition-colors inline-flex items-center justify-center gap-2"
+                  >
+                    Learn More <ArrowRight className="w-5 h-5" />
+                  </button>
+                  <Link 
+                    href="/consultation"
+                    className="border-2 border-slate-300 hover:border-slate-600 hover:text-slate-800 text-slate-600 px-8 py-3 rounded-md font-semibold transition-colors text-center inline-flex items-center justify-center"
+                  >
+                    Schedule Assessment
+                  </Link>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-green-500" />
+                    <span className="text-slate-600">Complete Installation</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-green-500" />
+                    <span className="text-slate-600">Staff Training</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-green-500" />
+                    <span className="text-slate-600">Ongoing Support</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative">
+                <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-8 border border-blue-200">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Cpu className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-lg font-bold text-slate-800 mb-2">Gambino Gold Systems</h3>
+                    <p className="text-slate-600 text-sm mb-4">
+                      Professional cryptocurrency mining infrastructure designed for hospitality businesses
+                    </p>
+                    <div className="bg-white p-3 rounded-lg border border-blue-200 mb-3">
+                      <div className="text-xs text-slate-500 mb-1">Revenue Opportunity</div>
+                      <div className="text-lg font-bold text-slate-800">New Income Stream</div>
+                      <div className="text-xs text-slate-500">for your venue</div>
+                    </div>
+                    <a 
+                      href="https://gambino.gold" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 text-sm underline"
+                    >
+                      Learn about Gambino Gold →
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -233,7 +243,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services - What VDV Actually Does */}
+      {/* Services */}
       <section id="services" className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -251,7 +261,6 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Site Assessment */}
             <div className="bg-slate-50 p-8 rounded-lg">
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
                 <Target className="w-6 h-6 text-blue-600" />
@@ -268,7 +277,6 @@ export default function Home() {
               </ul>
             </div>
 
-            {/* System Installation */}
             <div className="bg-slate-50 p-8 rounded-lg">
               <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
                 <Settings className="w-6 h-6 text-green-600" />
@@ -285,7 +293,6 @@ export default function Home() {
               </ul>
             </div>
 
-            {/* Staff Training */}
             <div className="bg-slate-50 p-8 rounded-lg">
               <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
                 <Users className="w-6 h-6 text-purple-600" />
@@ -302,7 +309,6 @@ export default function Home() {
               </ul>
             </div>
 
-            {/* Ongoing Support */}
             <div className="bg-slate-50 p-8 rounded-lg">
               <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
                 <Headphones className="w-6 h-6 text-yellow-600" />
@@ -319,7 +325,6 @@ export default function Home() {
               </ul>
             </div>
 
-            {/* Business Partnership */}
             <div className="bg-slate-50 p-8 rounded-lg">
               <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
                 <Handshake className="w-6 h-6 text-red-600" />
@@ -336,7 +341,6 @@ export default function Home() {
               </ul>
             </div>
 
-            {/* Revenue Optimization */}
             <div className="bg-slate-50 p-8 rounded-lg">
               <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
                 <TrendingUp className="w-6 h-6 text-indigo-600" />
@@ -356,69 +360,79 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Process - Keep existing timeline */}
+      {/* Process - With Background Image */}
       <section id="process" className="relative py-20 bg-slate-50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-slate-800 mb-4">Implementation Process</h2>
-            <p className="text-xl text-slate-600">Proven methodology for successful Gambino Gold deployments</p>
-          </div>
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-25 sm:opacity-35 md:opacity-40"
+          style={{
+            backgroundImage: "url('/process-bg.jpg')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
+        ></div>
+        <div className="relative z-10">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-slate-800 mb-4">Implementation Process</h2>
+              <p className="text-xl text-slate-600">Proven methodology for successful Gambino Gold deployments</p>
+            </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="relative">
-              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-slate-300"></div>
-              
-              {[
-                {
-                  step: "01",
-                  title: "Initial Assessment",
-                  description: "Site evaluation, requirements gathering, and feasibility analysis for Gambino Gold systems",
-                  icon: Target
-                },
-                {
-                  step: "02", 
-                  title: "System Design",
-                  description: "Custom configuration planning, equipment specifications, and implementation timeline",
-                  icon: Briefcase
-                },
-                {
-                  step: "03",
-                  title: "Professional Installation",
-                  description: "Complete hardware deployment, software setup, and comprehensive system testing",
-                  icon: Settings
-                },
-                {
-                  step: "04",
-                  title: "Team Training", 
-                  description: "Staff education, operational procedures, and knowledge transfer for daily operations",
-                  icon: Users
-                },
-                {
-                  step: "05",
-                  title: "Go-Live Support",
-                  description: "Launch support, performance monitoring, and ongoing technical assistance",
-                  icon: Zap
-                }
-              ].map((item, index) => (
-                <div key={index} className="relative flex items-start mb-12 last:mb-0">
-                  <div className="flex-shrink-0 w-16 h-16 bg-slate-700 rounded-full flex items-center justify-center text-white font-bold z-10">
-                    {item.step}
-                  </div>
-                  <div className="ml-6 bg-white p-6 rounded-lg border border-slate-200 shadow-sm flex-grow">
-                    <div className="flex items-center gap-3 mb-3">
-                      <item.icon className="w-5 h-5 text-slate-600" />
-                      <h3 className="text-lg font-bold text-gray-900">{item.title}</h3>
+            <div className="max-w-4xl mx-auto">
+              <div className="relative">
+                <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-slate-300"></div>
+                
+                {[
+                  {
+                    step: "01",
+                    title: "Initial Assessment",
+                    description: "Site evaluation, requirements gathering, and feasibility analysis for Gambino Gold systems",
+                    icon: Target
+                  },
+                  {
+                    step: "02", 
+                    title: "System Design",
+                    description: "Custom configuration planning, equipment specifications, and implementation timeline",
+                    icon: Briefcase
+                  },
+                  {
+                    step: "03",
+                    title: "Professional Installation",
+                    description: "Complete hardware deployment, software setup, and comprehensive system testing",
+                    icon: Settings
+                  },
+                  {
+                    step: "04",
+                    title: "Team Training", 
+                    description: "Staff education, operational procedures, and knowledge transfer for daily operations",
+                    icon: Users
+                  },
+                  {
+                    step: "05",
+                    title: "Go-Live Support",
+                    description: "Launch support, performance monitoring, and ongoing technical assistance",
+                    icon: Zap
+                  }
+                ].map((item, index) => (
+                  <div key={index} className="relative flex items-start mb-12 last:mb-0">
+                    <div className="flex-shrink-0 w-16 h-16 bg-slate-700 rounded-full flex items-center justify-center text-white font-bold z-10">
+                      {item.step}
                     </div>
-                    <p className="text-slate-600">{item.description}</p>
+                    <div className="ml-6 bg-white p-6 rounded-lg border border-slate-200 shadow-sm flex-grow">
+                      <div className="flex items-center gap-3 mb-3">
+                        <item.icon className="w-5 h-5 text-slate-600" />
+                        <h3 className="text-lg font-bold text-gray-900">{item.title}</h3>
+                      </div>
+                      <p className="text-slate-600">{item.description}</p>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* About - Updated for Gambino partnership */}
+      {/* About */}
       <section id="about" className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -474,7 +488,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact - Same as before but updated copy */}
+      {/* Contact */}
       <section id="contact" className="py-20 bg-slate-700">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -568,7 +582,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer - Same as before */}
+      {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row justify-between items-center">
