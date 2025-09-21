@@ -22,7 +22,10 @@ import {
   ArrowRight,
   ExternalLink,
   Clock,
-  Briefcase
+  Briefcase,
+  Settings,
+  TrendingUp,
+  Zap
 } from 'lucide-react'
 
 export default function Home() {
@@ -57,11 +60,10 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
-      {/* Header - Clean Corporate Style */}
+      {/* Header - Same as before */}
       <header className="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            {/* Logo - Corporate Typography */}
             <div className="flex items-center space-x-3">
               <div className="h-12 w-12 flex items-center justify-center">
                 <Image 
@@ -80,12 +82,11 @@ export default function Home() {
               <div className="hidden sm:block">
                 <div className="text-xl font-bold text-slate-800 tracking-tight">Volunteer Digital Ventures</div>
                 <div className="text-xs text-slate-500 uppercase tracking-wider leading-tight">
-                  Contractor Services
+                  Implementation Services
                 </div>
               </div>
             </div>
 
-            {/* Desktop Nav - Clean Links */}
             <nav className="hidden md:flex items-center space-x-1">
               {[
                 { id: 'home', label: 'Home' },
@@ -108,17 +109,15 @@ export default function Home() {
               ))}
             </nav>
 
-            {/* CTA Button */}
             <div className="hidden md:block">
               <Link 
                 href="/consultation"
                 className="bg-slate-700 hover:bg-slate-800 text-white px-6 py-2 rounded-md font-medium transition-colors inline-flex items-center gap-2"
               >
-                Request Service <ArrowRight className="w-4 h-4" />
+                Get Quote <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
 
-            {/* Mobile Menu Button */}
             <button 
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)} 
               className="md:hidden p-2 rounded-md hover:bg-gray-100"
@@ -127,7 +126,6 @@ export default function Home() {
             </button>
           </div>
 
-          {/* Mobile Menu */}
           {mobileMenuOpen && (
             <div className="md:hidden py-4 border-t border-slate-200">
               <div className="flex flex-col space-y-2">
@@ -144,7 +142,7 @@ export default function Home() {
                   href="/consultation"
                   className="bg-slate-700 text-white px-4 py-2 rounded-md font-medium mt-2 text-center block"
                 >
-                  Request Service
+                  Get Quote
                 </Link>
               </div>
             </div>
@@ -152,222 +150,254 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Hero - Clean Business Layout */}
-      <section id="home" className="relative py-20 bg-slate-50">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
-          style={{
-            backgroundImage: "url('/hero-bg.jpg')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
-          }}
-        ></div>
-        <div className="relative z-10">
+      {/* Hero - Professional & Clean */}
+      <section id="home" className="relative py-20 bg-gradient-to-br from-slate-50 via-white to-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Content */}
             <div>
-              <div className="inline-flex items-center gap-2 bg-slate-100 text-slate-700 text-sm font-medium px-4 py-2 rounded-full mb-6">
+              <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm font-medium mb-6">
                 <Building2 className="w-4 h-4" />
-                Licensed Tennessee Contractor
+                Licensed Gambino Gold Implementation Partner
+                <a href="https://gambino.gold" target="_blank" rel="noopener noreferrer" className="ml-2 text-blue-600 hover:text-blue-800 underline text-xs">
+                  Learn More →
+                </a>
               </div>
               
               <h1 className="text-4xl lg:text-5xl font-bold text-slate-800 mb-6 leading-tight">
-                Digital Infrastructure
-                <span className="text-slate-600 block">Implementation Services</span>
+                Cryptocurrency Infrastructure
+                <span className="text-slate-600 block">for Business Venues</span>
               </h1>
               
               <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-                Professional technical contractor specializing in cryptocurrency mining infrastructure. From site assessment to full deployment and ongoing support.
+                VDV installs and manages Gambino Gold cryptocurrency mining systems for restaurants, bars, and entertainment venues. Professional deployment with full technical support.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <button 
                   onClick={() => scrollToSection('services')} 
                   className="bg-slate-700 hover:bg-slate-800 text-white px-8 py-3 rounded-md font-semibold transition-colors inline-flex items-center justify-center gap-2"
                 >
-                  Our Services <ArrowRight className="w-5 h-5" />
+                  Learn More <ArrowRight className="w-5 h-5" />
                 </button>
                 <Link 
                   href="/consultation"
                   className="border-2 border-slate-300 hover:border-slate-600 hover:text-slate-800 text-slate-600 px-8 py-3 rounded-md font-semibold transition-colors text-center inline-flex items-center justify-center"
                 >
-                  Get Started
+                  Schedule Assessment
                 </Link>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-green-500" />
+                  <span className="text-slate-600">Complete Installation</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-green-500" />
+                  <span className="text-slate-600">Staff Training</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-green-500" />
+                  <span className="text-slate-600">Ongoing Support</span>
+                </div>
               </div>
             </div>
 
-            {/* Stats/Info Cards */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
-                <div className="text-3xl font-bold text-slate-600 mb-2">24/7</div>
-                <div className="text-gray-600 font-medium">Technical Support</div>
-              </div>
-              <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
-                <div className="text-3xl font-bold text-slate-600 mb-2">TN</div>
-                <div className="text-gray-600 font-medium">Licensed LLC</div>
-              </div>
-              <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
-                <div className="text-3xl font-bold text-slate-600 mb-2">100%</div>
-                <div className="text-gray-600 font-medium">Compliance Focus</div>
-              </div>
-              <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
-                <div className="text-3xl font-bold text-slate-600 mb-2">∞</div>
-                <div className="text-gray-600 font-medium">Ongoing Support</div>
+            <div className="relative">
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-8 border border-blue-200">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Cpu className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-slate-800 mb-2">Gambino Gold Systems</h3>
+                  <p className="text-slate-600 text-sm mb-4">
+                    Professional cryptocurrency mining infrastructure designed for hospitality businesses
+                  </p>
+                  <div className="bg-white p-3 rounded-lg border border-blue-200 mb-3">
+                    <div className="text-xs text-slate-500 mb-1">Revenue Opportunity</div>
+                    <div className="text-lg font-bold text-slate-800">New Income Stream</div>
+                    <div className="text-xs text-slate-500">for your venue</div>
+                  </div>
+                  <a 
+                    href="https://gambino.gold" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-800 text-sm underline"
+                  >
+                    Learn about Gambino Gold →
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        </div>
       </section>
 
-      {/* Services - Card Grid Layout */}
+      {/* Services - What VDV Actually Does */}
       <section id="services" className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-slate-800 mb-4">Professional Contractor Services</h2>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              End-to-end digital infrastructure solutions for business partners
+            <h2 className="text-3xl font-bold text-slate-800 lg:text-4xl mb-4">
+              How We Implement Gambino Gold Systems
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-4">
+              Complete end-to-end service from initial assessment to ongoing operations. We handle all technical aspects so you can focus on your business.
+            </p>
+            <p className="text-slate-500 text-sm">
+              <a href="https://gambino.gold" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">
+                Learn more about Gambino Gold's cryptocurrency mining platform →
+              </a>
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Business Development */}
-            <div className="group">
-              <div className="bg-white border-2 border-slate-200 rounded-lg p-8 hover:border-slate-400 hover:shadow-md transition-all duration-300">
-                <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-slate-700 group-hover:text-white transition-colors">
-                  <Handshake className="w-6 h-6 text-slate-600 group-hover:text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-800 mb-4">Business Development</h3>
-                <p className="text-slate-600 mb-6">
-                  Partner identification, qualification, and relationship management. From initial contact through contract execution.
-                </p>
-                <ul className="space-y-2 text-sm text-slate-500">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-slate-600" />
-                    Site assessment and qualification
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-slate-600" />
-                    Contract negotiation support
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-slate-600" />
-                    Ongoing account management
-                  </li>
-                </ul>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Site Assessment */}
+            <div className="bg-slate-50 p-8 rounded-lg">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                <Target className="w-6 h-6 text-blue-600" />
               </div>
+              <h3 className="text-xl font-bold text-slate-800 mb-4">Site Assessment</h3>
+              <p className="text-slate-600 mb-6">
+                Professional evaluation of your venue to determine optimal system placement and configuration requirements.
+              </p>
+              <ul className="text-slate-600 text-sm space-y-2">
+                <li>• Space and layout analysis</li>
+                <li>• Electrical and network requirements</li>
+                <li>• Customer flow optimization</li>
+                <li>• Revenue potential evaluation</li>
+              </ul>
             </div>
 
-            {/* Technical Implementation */}
-            <div className="group">
-              <div className="bg-white border-2 border-slate-200 rounded-lg p-8 hover:border-slate-400 hover:shadow-md transition-all duration-300">
-                <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-slate-700 group-hover:text-white transition-colors">
-                  <Cpu className="w-6 h-6 text-slate-600 group-hover:text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-800 mb-4">Technical Installation</h3>
-                <p className="text-slate-600 mb-6">
-                  Complete hardware and software deployment. System integration, testing, and staff training included.
-                </p>
-                <ul className="space-y-2 text-sm text-slate-500">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-slate-600" />
-                    Hardware installation & config
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-slate-600" />
-                    System integration & testing
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-slate-600" />
-                    Staff training & documentation
-                  </li>
-                </ul>
+            {/* System Installation */}
+            <div className="bg-slate-50 p-8 rounded-lg">
+              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                <Settings className="w-6 h-6 text-green-600" />
               </div>
+              <h3 className="text-xl font-bold text-slate-800 mb-4">Professional Installation</h3>
+              <p className="text-slate-600 mb-6">
+                Complete hardware setup and software configuration by certified technicians with full testing and verification.
+              </p>
+              <ul className="text-slate-600 text-sm space-y-2">
+                <li>• Hardware installation and setup</li>
+                <li>• Gambino software configuration</li>
+                <li>• Network integration and testing</li>
+                <li>• Security and performance verification</li>
+              </ul>
+            </div>
+
+            {/* Staff Training */}
+            <div className="bg-slate-50 p-8 rounded-lg">
+              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                <Users className="w-6 h-6 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-800 mb-4">Team Training</h3>
+              <p className="text-slate-600 mb-6">
+                Comprehensive training program for your staff covering system operations, customer service, and daily procedures.
+              </p>
+              <ul className="text-slate-600 text-sm space-y-2">
+                <li>• System operation training</li>
+                <li>• Customer service procedures</li>
+                <li>• Daily maintenance routines</li>
+                <li>• Troubleshooting basics</li>
+              </ul>
             </div>
 
             {/* Ongoing Support */}
-            <div className="group">
-              <div className="bg-white border-2 border-slate-200 rounded-lg p-8 hover:border-slate-400 hover:shadow-md transition-all duration-300">
-                <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-slate-700 group-hover:text-white transition-colors">
-                  <Headphones className="w-6 h-6 text-slate-600 group-hover:text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-800 mb-4">Support & Maintenance</h3>
-                <p className="text-slate-600 mb-6">
-                  24/7 technical support, performance monitoring, and relationship management services.
-                </p>
-                <ul className="space-y-2 text-sm text-slate-500">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-slate-600" />
-                    Round-the-clock tech support
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-slate-600" />
-                    Performance optimization
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-slate-600" />
-                    Partner satisfaction tracking
-                  </li>
-                </ul>
+            <div className="bg-slate-50 p-8 rounded-lg">
+              <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
+                <Headphones className="w-6 h-6 text-yellow-600" />
               </div>
+              <h3 className="text-xl font-bold text-slate-800 mb-4">Technical Support</h3>
+              <p className="text-slate-600 mb-6">
+                Round-the-clock technical support with remote monitoring, maintenance, and performance optimization.
+              </p>
+              <ul className="text-slate-600 text-sm space-y-2">
+                <li>• 24/7 technical helpdesk</li>
+                <li>• Remote system monitoring</li>
+                <li>• Performance optimization</li>
+                <li>• Software updates and patches</li>
+              </ul>
+            </div>
+
+            {/* Business Partnership */}
+            <div className="bg-slate-50 p-8 rounded-lg">
+              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+                <Handshake className="w-6 h-6 text-red-600" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-800 mb-4">Partnership Management</h3>
+              <p className="text-slate-600 mb-6">
+                VDV manages your relationship with Gambino Gold, handling contracts, settlements, and compliance requirements.
+              </p>
+              <ul className="text-slate-600 text-sm space-y-2">
+                <li>• Contract and legal coordination</li>
+                <li>• Settlement processing oversight</li>
+                <li>• Compliance management</li>
+                <li>• Performance reporting</li>
+              </ul>
+            </div>
+
+            {/* Revenue Optimization */}
+            <div className="bg-slate-50 p-8 rounded-lg">
+              <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+                <TrendingUp className="w-6 h-6 text-indigo-600" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-800 mb-4">Performance Optimization</h3>
+              <p className="text-slate-600 mb-6">
+                Ongoing analysis and optimization to maximize system performance and ensure smooth operations.
+              </p>
+              <ul className="text-slate-600 text-sm space-y-2">
+                <li>• Performance monitoring and analytics</li>
+                <li>• Operational efficiency improvements</li>
+                <li>• Customer experience optimization</li>
+                <li>• Regular system maintenance</li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Process - Timeline Style */}
+      {/* Process - Keep existing timeline */}
       <section id="process" className="relative py-20 bg-slate-50">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
-          style={{
-            backgroundImage: "url('/process-bg.jpg')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
-          }}
-        ></div>
-        <div className="relative z-10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-slate-800 mb-4">Our Implementation Process</h2>
-            <p className="text-xl text-slate-600">Proven methodology for successful deployments</p>
+            <h2 className="text-3xl font-bold text-slate-800 mb-4">Implementation Process</h2>
+            <p className="text-xl text-slate-600">Proven methodology for successful Gambino Gold deployments</p>
           </div>
 
           <div className="max-w-4xl mx-auto">
             <div className="relative">
-              {/* Timeline Line */}
               <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-slate-300"></div>
               
               {[
                 {
                   step: "01",
                   title: "Initial Assessment",
-                  description: "Site evaluation, requirements gathering, and feasibility analysis",
+                  description: "Site evaluation, requirements gathering, and feasibility analysis for Gambino Gold systems",
                   icon: Target
                 },
                 {
                   step: "02", 
-                  title: "Planning & Design",
-                  description: "Technical specifications, timeline development, and resource allocation",
+                  title: "System Design",
+                  description: "Custom configuration planning, equipment specifications, and implementation timeline",
                   icon: Briefcase
                 },
                 {
                   step: "03",
-                  title: "Installation & Testing",
-                  description: "Hardware deployment, software configuration, and comprehensive testing",
-                  icon: Cpu
+                  title: "Professional Installation",
+                  description: "Complete hardware deployment, software setup, and comprehensive system testing",
+                  icon: Settings
                 },
                 {
                   step: "04",
-                  title: "Training & Handover", 
-                  description: "Staff training, documentation delivery, and operational transition",
+                  title: "Team Training", 
+                  description: "Staff education, operational procedures, and knowledge transfer for daily operations",
                   icon: Users
                 },
                 {
                   step: "05",
-                  title: "Ongoing Support",
-                  description: "24/7 monitoring, maintenance, and continuous optimization",
-                  icon: Clock
+                  title: "Go-Live Support",
+                  description: "Launch support, performance monitoring, and ongoing technical assistance",
+                  icon: Zap
                 }
               ].map((item, index) => (
                 <div key={index} className="relative flex items-start mb-12 last:mb-0">
@@ -379,30 +409,27 @@ export default function Home() {
                       <item.icon className="w-5 h-5 text-slate-600" />
                       <h3 className="text-lg font-bold text-gray-900">{item.title}</h3>
                     </div>
-                    <p className="text-slate-600 mb-6">{item.description}</p>
+                    <p className="text-slate-600">{item.description}</p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
         </div>
-      </div>
       </section>
 
-      {/* About - Two Column */}
+      {/* About - Updated for Gambino partnership */}
       <section id="about" className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold text-slate-800 mb-6">About Volunteer Digital Ventures</h2>
               <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                VDV is a Tennessee-licensed contractor specializing in digital infrastructure deployment. 
-                We bridge the gap between technology providers and implementation partners through 
-                professional services and ongoing support.
+                VDV is a Tennessee-licensed contractor specializing in cryptocurrency infrastructure deployment. 
+                As an authorized Gambino Gold implementation partner, we bring cutting-edge mining technology to hospitality venues across the United States.
               </p>
               <p className="text-slate-600 mb-8">
-                Operating as an independent contractor, we maintain comprehensive business insurance, 
-                professional licensing, and strict compliance with all applicable regulations.
+                Our team handles every aspect of system deployment, from initial site assessment through ongoing technical support, ensuring venues can seamlessly integrate cryptocurrency operations into their business.
               </p>
               
               <div className="grid grid-cols-2 gap-4">
@@ -413,8 +440,8 @@ export default function Home() {
                 </div>
                 <div className="text-center p-4 bg-slate-50 rounded-lg">
                   <Shield className="w-6 h-6 text-slate-600 mx-auto mb-2" />
-                  <div className="font-semibold text-slate-800">Fully Licensed</div>
-                  <div className="text-sm text-slate-500">Insured & Compliant</div>
+                  <div className="font-semibold text-slate-800">Authorized Partner</div>
+                  <div className="text-sm text-slate-500">Gambino Gold Certified</div>
                 </div>
               </div>
             </div>
@@ -423,11 +450,11 @@ export default function Home() {
               <h3 className="text-xl font-bold text-slate-800 mb-6">Professional Standards</h3>
               <div className="space-y-4">
                 {[
-                  "Licensed business operations in Tennessee",
-                  "Comprehensive general liability insurance",
-                  "Full regulatory compliance maintained", 
-                  "Professional documentation for all projects",
-                  "Independent contractor status verified"
+                  "Licensed Tennessee LLC with comprehensive insurance",
+                  "Authorized Gambino Gold implementation partner",
+                  "Professional technical certification and training", 
+                  "Full regulatory compliance and documentation",
+                  "24/7 technical support for all installations"
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-slate-600 flex-shrink-0 mt-0.5" />
@@ -438,8 +465,8 @@ export default function Home() {
               
               <div className="mt-8 p-4 bg-white rounded-lg border border-slate-200">
                 <p className="text-sm text-slate-600">
-                  <strong>Important:</strong> VDV provides technical and business development services only. 
-                  We do not offer financial services, investment advice, or regulatory compliance consultation.
+                  <strong>Service Focus:</strong> VDV provides technical implementation and support services. 
+                  We are not a financial services provider and do not offer investment advice or regulatory consultation.
                 </p>
               </div>
             </div>
@@ -447,19 +474,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact - Form Style */}
+      {/* Contact - Same as before but updated copy */}
       <section id="contact" className="py-20 bg-slate-700">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Ready to Start Your Project?</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">Ready to Explore Cryptocurrency Infrastructure?</h2>
             <p className="text-xl text-slate-200 max-w-2xl mx-auto">
-              Contact us to discuss your technical infrastructure needs and service requirements
+              Contact VDV to discuss Gambino Gold system implementation for your venue
             </p>
           </div>
 
           <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden">
             <div className="grid lg:grid-cols-2">
-              {/* Contact Info */}
               <div className="bg-slate-50 p-8">
                 <h3 className="text-xl font-bold text-slate-800 mb-6">Contact Information</h3>
                 
@@ -479,8 +505,8 @@ export default function Home() {
                       <Building2 className="w-5 h-5 text-slate-600" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-slate-800">Entity Type</h4>
-                      <p className="text-slate-600">Tennessee Limited Liability Company</p>
+                      <h4 className="font-semibold text-slate-800">Authorization</h4>
+                      <p className="text-slate-600">Licensed Gambino Gold Implementation Partner</p>
                     </div>
                   </div>
 
@@ -490,36 +516,35 @@ export default function Home() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-slate-800">Service Area</h4>
-                      <p className="text-slate-600">Professional contractor services available nationwide</p>
+                      <p className="text-slate-600">Professional implementation services nationwide</p>
                     </div>
                   </div>
                 </div>
 
                 <div className="mt-8 p-4 bg-slate-200 rounded-lg">
-                  <h4 className="font-semibold text-slate-800 mb-2">Business Hours</h4>
+                  <h4 className="font-semibold text-slate-800 mb-2">Support Hours</h4>
                   <p className="text-slate-600 text-sm">
-                    Project inquiries: Business hours<br />
+                    Project consultations: Business hours<br />
                     Technical support: 24/7 for active clients
                   </p>
                 </div>
               </div>
 
-              {/* Service Request Form */}
               <div className="p-8">
-                <h3 className="text-xl font-bold text-slate-800 mb-6">Request Technical Services</h3>
+                <h3 className="text-xl font-bold text-slate-800 mb-6">Schedule Your Assessment</h3>
                 <div className="space-y-4">
                   <p className="text-gray-600">
-                    For digital infrastructure projects, technical implementation services, or partnership opportunities, 
-                    contact us to discuss your requirements and timeline.
+                    Interested in bringing Gambino Gold cryptocurrency systems to your venue? 
+                    Contact us for a professional site assessment and implementation consultation.
                   </p>
                   
                   <div className="bg-slate-100 p-4 rounded-lg">
-                    <h4 className="font-semibold text-slate-800 mb-2">Our Service Process</h4>
+                    <h4 className="font-semibold text-slate-800 mb-2">Assessment Process</h4>
                     <ul className="text-slate-600 text-sm space-y-1">
-                      <li>• Initial project consultation</li>
-                      <li>• Technical requirements assessment</li>
-                      <li>• Service agreement development</li>
-                      <li>• Implementation & ongoing support</li>
+                      <li>• Site evaluation and feasibility analysis</li>
+                      <li>• System requirements and configuration planning</li>
+                      <li>• Implementation timeline and cost estimate</li>
+                      <li>• Ongoing support and partnership details</li>
                     </ul>
                   </div>
                   
@@ -527,14 +552,13 @@ export default function Home() {
                     href="/consultation"
                     className="w-full bg-slate-700 hover:bg-slate-800 text-white py-3 px-6 rounded-md font-semibold transition-colors inline-flex items-center justify-center gap-2"
                   >
-                    Schedule Consultation <ExternalLink className="w-4 h-4" />
+                    Request Assessment <ExternalLink className="w-4 h-4" />
                   </Link>
                   
-                  {/* Simple contact info for now */}
                   <div className="mt-6 pt-6 border-t border-slate-200">
                     <p className="text-sm text-slate-500 text-center">
-                      Professional contractor services available nationwide.<br/>
-                      Licensed Tennessee LLC with comprehensive business insurance.
+                      Professional cryptocurrency infrastructure implementation.<br/>
+                      Licensed Tennessee contractor with full Gambino Gold authorization.
                     </p>
                   </div>
                 </div>
@@ -544,7 +568,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer - Minimal */}
+      {/* Footer - Same as before */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row justify-between items-center">
@@ -565,13 +589,13 @@ export default function Home() {
               </div>
               <div>
                 <div className="font-bold">Volunteer Digital Ventures, LLC</div>
-                <div className="text-sm text-gray-400">Professional Contractor Services</div>
+                <div className="text-sm text-gray-400">Gambino Gold Implementation Services</div>
               </div>
             </div>
             
             <div className="text-center lg:text-right">
               <p className="text-gray-400 text-sm">
-                © 2025 Volunteer Digital Ventures, LLC. Licensed Tennessee contractor.
+                © 2025 Volunteer Digital Ventures, LLC. Licensed implementation partner.
               </p>
             </div>
           </div>
