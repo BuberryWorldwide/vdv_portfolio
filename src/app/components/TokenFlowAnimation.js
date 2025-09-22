@@ -107,7 +107,7 @@ const TokenFlowAnimation = () => {
       <div className="mt-6 grid grid-cols-3 gap-4 text-center">
         <div>
           <div className="text-lg font-bold text-gray-800">$1,247</div>
-          <div className="text-xs text-gray-600">Today's Volume</div>
+          <div className="text-xs text-gray-600">Today&apos;s Volume</div>
         </div>
         <div>
           <div className="text-lg font-bold text-gray-800">156</div>
