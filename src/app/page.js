@@ -114,7 +114,7 @@ export default function Home() {
                 href="/consultation"
                 className="bg-slate-700 hover:bg-slate-800 text-white px-6 py-2 rounded-md font-medium transition-colors inline-flex items-center gap-2"
               >
-                Get Quote <ArrowRight className="w-4 h-4" />
+                Contact Us <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
 
