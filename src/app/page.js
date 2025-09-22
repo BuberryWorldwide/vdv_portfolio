@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
+import TokenFlowAnimation from './components/TokenFlowAnimation'
 
 import { 
   Wrench,
@@ -243,6 +244,8 @@ export default function Home() {
         </div>
       </section>
 
+      
+
       {/* Services */}
       <section id="services" className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -430,6 +433,10 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="relative z-10 mx-auto max-w-6xl px-6 py-16">
+        <TokenFlowAnimation />
       </section>
 
       {/* About */}
